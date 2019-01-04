@@ -20,15 +20,13 @@ var bit = "https://rest.bandsintown.com/artists/" + b + "/events?app_id=codingbo
 if (a === "concert-this") {
   request(bit, function(err, res) {
     if (err) throw err;
-    console.log(b);
-    console.log(res);
+    var data = JSON.parse(res.body);
+    console.log(data[0].venue.name);
+    console.log(data[0].venue.city + ", " + data[0].venue.country);
+    //console.log(data[0].datetime);
+    console.log(moment(data[0].datetime).format("L"));
   });
 };
-// * Name of the venue
-
-// * Venue location
-
-// * Date of the Event (use moment to format this as "MM/DD/YYYY")
 
 if (a=== "spotify-this-song") {
   request(spotify, function (err, res) {
