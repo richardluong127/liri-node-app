@@ -79,6 +79,9 @@ if (a === "do-what-it-says") {
         console.log(data.tracks.items[0].album.name);
       });
     }
+
+    //Below: movie-this and concert-this are not working for random.txt
+
     var queryUrl = "http://www.omdbapi.com/?t=" + b + "&y=&plot=short&apikey=trilogy";
     if (!dataArr[1]) {
       queryUrl = "http://www.omdbapi.com/?t=" + "Mr.Nobody" + "&y=&plot=short&apikey=trilogy";
