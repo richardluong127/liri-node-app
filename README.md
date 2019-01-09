@@ -1,6 +1,14 @@
 # liri-node-app
 
 This app will allow users to access various information from different databases using node command line arguments.
+Here's how to use it:
+
+1. Open liri.js in terminal.
+2. Run the following command (without the brackets):
+
+node .\liri.js [input which action you'd like liri to perform] [input your specific parameter]
+
+Here are some things liri can do:
 
 Search upcoming concert venue information for a specific artist.
 node .\liri.js concert-this [insert name of artist]
@@ -14,4 +22,7 @@ node .\liri.js movie-this [insert name of movie]
 Input text into random.txt file and Liri will run the information for you as well.
 node .\liri.js do-what-it-says
 
-Have fun!
+Here's an example of what to expect:
+
+![Liri Node App](C:\Users\Administrator\Desktop\UCBEL201809FSFONLINE2\homeworkWeek10\liri-node-app\LiriExample.png)
+Format: ![Alt Text](url)

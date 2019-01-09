@@ -16,9 +16,11 @@ if (a === "concert-this") {
   request(bit, function (err, res) {
     if (err) throw err;
     var data = JSON.parse(res.body);
-    console.log(data[0].venue.name);
-    console.log(data[0].venue.city + ", " + data[0].venue.country);
-    console.log(moment(data[0].datetime).format("L"));
+    console.log("-----------------------------------------------");
+    console.log("Venue: " + data[0].venue.name);
+    console.log("Location: " + data[0].venue.city + ", " + data[0].venue.country);
+    console.log("Date: " + moment(data[0].datetime).format("L"));
+    console.log("-----------------------------------------------");
   });
 };
 
@@ -31,11 +33,12 @@ if (a === "spotify-this-song") {
     if (err) {
       return console.log('Error occurred: ' + err);
     }
-
-    console.log("Artist Name: " + data.tracks.items[0].album.artists[0].name);
-    console.log(data.tracks.items[0].name);
-    console.log(data.tracks.items[0].preview_url);
-    console.log(data.tracks.items[0].album.name);
+    console.log("-----------------------------------------------");
+    console.log("Artist: " + data.tracks.items[0].album.artists[0].name);
+    console.log("Song: " + data.tracks.items[0].name);
+    console.log("Sample Listen: " + data.tracks.items[0].preview_url);
+    console.log("Album: " + data.tracks.items[0].album.name);
+    console.log("-----------------------------------------------");
   });
 }
 
@@ -48,7 +51,7 @@ if (a === "movie-this") {
     if (!error && response.statusCode == 200) {
 
       var jsonData = JSON.parse(body);
-
+      console.log("-----------------------------------------------");
       console.log("Title: " + jsonData.Title);
       console.log("Released: " + jsonData.Year);
       console.log("IMDB Rating: " + jsonData.imdbRating);
@@ -57,6 +60,7 @@ if (a === "movie-this") {
       console.log("Language(s): " + jsonData.Language);
       console.log("Plot: " + jsonData.Plot);
       console.log("Actors: " + jsonData.Actors);
+      console.log("-----------------------------------------------");
     }
   });
 };
@@ -73,10 +77,12 @@ if (a === "do-what-it-says") {
         if (err) {
           return console.log('Error occurred: ' + err);
         }
+        console.log("-----------------------------------------------");
         console.log("Artist Name: " + data.tracks.items[0].album.artists[0].name);
-        console.log(data.tracks.items[0].name);
-        console.log(data.tracks.items[0].preview_url);
-        console.log(data.tracks.items[0].album.name);
+        console.log("Song: " + data.tracks.items[0].name);
+        console.log("Sample Listen: " + data.tracks.items[0].preview_url);
+        console.log("Album: " + data.tracks.items[0].album.name);
+        console.log("-----------------------------------------------");
       });
     }
 
@@ -91,7 +97,7 @@ if (a === "do-what-it-says") {
         if (!error && response.statusCode == 200) {
 
           var jsonData = JSON.parse(body);
-
+          console.log("-----------------------------------------------");
           console.log("Title: " + jsonData.Title);
           console.log("Released: " + jsonData.Year);
           console.log("IMDB Rating: " + jsonData.imdbRating);
@@ -100,6 +106,7 @@ if (a === "do-what-it-says") {
           console.log("Language(s): " + jsonData.Language);
           console.log("Plot: " + jsonData.Plot);
           console.log("Actors: " + jsonData.Actors);
+          console.log("-----------------------------------------------");
         }
       });
     };
@@ -107,9 +114,11 @@ if (a === "do-what-it-says") {
       request("https://rest.bandsintown.com/artists/" + dataArr[1] + "/events?app_id=codingbootcamp", function (err, res) {
         if (err) throw err;
         var data = JSON.parse(res.body);
-        console.log(data[0].venue.name);
-        console.log(data[0].venue.city + ", " + data[0].venue.country);
-        console.log(moment(data[0].datetime).format("L"));
+        console.log("-----------------------------------------------");
+        console.log("Venue: " + data[0].venue.name);
+        console.log("Location: " + data[0].venue.city + ", " + data[0].venue.country);
+        console.log("Date: " + moment(data[0].datetime).format("L"));
+        console.log("-----------------------------------------------");
       });
     };
   });
