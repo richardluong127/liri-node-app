@@ -24,5 +24,4 @@ node .\liri.js do-what-it-says
 
 Here's an example of what to expect:
 
-![Liri Node App](liri-node-app/LiriExample.png)
-Format: ![Alt Text](liri-node-app/LiriExample.png)
+![Image of Liri Node App](https://richardluong127.github.io/liri-node-app/LiriExample.png)
